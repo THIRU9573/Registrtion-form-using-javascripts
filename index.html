@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/d80058540b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    </head>
+    <body>
+        <div class="background-container d-flex flex-column justify-content-end">
+            <div class="register">
+                <h1>Register Form</h1>
+                <form id="register" method="post" onsubmit="submitForm(event)">
+                    <label>Enter Your Name</label><br>
+                    <input type="text" name="lname" id="name" placeholder="Enter Your Name"><br><br>
+            
+                    <label>Mobile</label><br>
+                    <input type="number" name="mobile" id="mobile" placeholder="Enter Your Mobile Number"><br><br>
+            
+                    <label>Email</label><br>
+                    <input type="email" name="email" id="email" placeholder="Enter Your Mail"><br><br>
+            
+                    <label>Gender</label>&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender" id="male">&nbsp;
+                    <span>Male</span>&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender" id="female">&nbsp;
+                    <span>Female</span><br><br>
+            
+                    <label>Known Language</label><br>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="lang" id="telugu">&nbsp;
+                    <span>Telugu</span>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="lang" id="hindhi">&nbsp;
+                    <span>Hindi</span>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="lang" id="english">&nbsp;
+                    <span>English</span><br><br>
+            
+                    <input type="submit" name="submit" id="submit" value="Submit" >
+                </form>
+            </div>
+            <div class="popup" id="popup">
+              <i class="fa-solid fa-circle-check"></i>
+                <h2>Thank you</h2>
+                <p>Your Details have been successfully submitted. Thanks!</p>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
+            <div class="errorpopup" id="errorpopup">
+              <i class="fa-solid fa-circle-xmark"></i>
+                <h2>ERROR</h2>
+                <p>Fill the required fields</p>
+                <button type="button" onclick="errorClosePopup()">OK</button>
+            </div>
+        </div>        
+    <script src="app.js" defer></script>
+    </body>
